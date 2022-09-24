@@ -3,7 +3,7 @@ import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 @Schema()
 export class PatientVisits{
     @Prop()
-    pregnancyLength: number
+    pregnancyLength: string
 
     @Prop()
     numberOfVisits: number
@@ -12,7 +12,7 @@ export class PatientVisits{
     nextVisit: Date
 
     @Prop()
-    remainVisits: Date
+    remaingVisits: number
 }
 
 export const PatientVisitsSchema = SchemaFactory.createForClass(PatientVisits)

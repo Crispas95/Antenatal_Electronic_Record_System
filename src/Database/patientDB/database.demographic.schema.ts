@@ -26,6 +26,12 @@ export class PatientDemographic{
      @Prop()
      maritalStatus: string
 
+     @Prop()
+     phoneNUmber: number
+
+     @Prop()
+     address?: string
+
 }
 
 export const PatientDemographicSchema = SchemaFactory.createForClass(PatientDemographic)

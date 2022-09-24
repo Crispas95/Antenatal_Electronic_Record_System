@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { PatientDemographicSchema } from './Database/database.demographic.schema';
-import { PatientVisitsSchema } from './Database/database.visits';
+import { PatientDemographicSchema } from './Database/patientDB/database.demographic.schema';
+import { PatientVisitsSchema } from './Database/patientDB/database.visits';
 import { PatientModule } from './patient/patient.module';
 
 @Module({
