@@ -1,15 +1,12 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { PatientDemographicSchema } from './Database/patientDB/database.demographic.schema';
-import { PatientVisitsSchema } from './Database/patientDB/database.visits';
-import { PatientModule } from './patient/patient.module';
+import { PatientDemoSchema } from './patient/dto/patientDemo.schema';
+
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/antenatalDB'),
-    PatientModule,
-    MongooseModule.forFeature([{name: 'PatientDemographic',schema: PatientDemographicSchema}]),
-    MongooseModule.forFeature([{name:'PatientVisit', schema: PatientVisitsSchema}])
+    MongooseModule.forFeature([{name: 'Patient',schema: PatientDemoSchema}]),  // updated
   ],
 })
 export class AppModule {}
