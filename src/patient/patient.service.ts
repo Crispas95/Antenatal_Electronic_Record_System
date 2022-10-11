@@ -26,7 +26,7 @@ export class PatientService {
     
   async create(createPatientDemoDto: CreatePatientDemoDto):Promise<PatientDemoDocument> {
     const createPAtientRecord = new this.patientModel(createPatientDemoDto);
-    return createPAtientRecord.save();
+    return await createPAtientRecord.save();
   }
 
   async update(id: number, updatePatientDemoDto: UpdatePatientDemoDto):Promise<PatientDemoDocument> {

@@ -29,7 +29,7 @@ export class Patient{
      maritalStatus: string
 
      @Prop()
-     phoneNUmber: number
+     phoneNumber: number
 
      @Prop()
      address?: string

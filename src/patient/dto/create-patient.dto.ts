@@ -7,7 +7,7 @@ export class CreatePatientDemoDto {
         @IsNotEmpty()
         readonly name: string;
     
-        //@IsDate()
+        @IsDate()
         @IsNotEmpty()
         readonly dataOfBirth: string;
     

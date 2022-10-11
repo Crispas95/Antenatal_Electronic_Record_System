@@ -4,7 +4,7 @@ export interface IpatientDemographic extends Document{
     readonly fullName: string;
     readonly dateOfBirth: string;
     readonly gender: string;
-    readonly homeDisrict: string;
+    readonly homeDistrict: string;
     readonly traditionalAuthority: string;
     readonly village: string;
     readonly numberOfChildren: string;
