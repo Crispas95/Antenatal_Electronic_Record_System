@@ -10,11 +10,6 @@ import { UpdatePatientDemoDto } from './dto/update-patient.dto';
 export class PatientService {
 
   constructor (@InjectModel(Patient.name) private patientModel: Model<PatientDemoDocument>){}
-  
-  async create(createPatientDemoDto: CreatePatientDemoDto):Promise<PatientDemoDocument> {
-    const createPAtientRecord = new this.patientModel(createPatientDemoDto);
-    return createPAtientRecord.save();
-  }
 
   async findAll():Promise<PatientDemoDocument[]> {
     return this.patientModel.find().exec();
@@ -26,6 +21,12 @@ export class PatientService {
 
   async findById(id: number):Promise<PatientDemoDocument>{
     return this.patientModel.findById(id);
+  }
+
+    
+  async create(createPatientDemoDto: CreatePatientDemoDto):Promise<PatientDemoDocument> {
+    const createPAtientRecord = new this.patientModel(createPatientDemoDto);
+    return createPAtientRecord.save();
   }
 
   async update(id: number, updatePatientDemoDto: UpdatePatientDemoDto):Promise<PatientDemoDocument> {

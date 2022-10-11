@@ -2,7 +2,7 @@ import { Document } from "mongoose";
 
 export interface IpatientDemographic extends Document{
     readonly fullName: string;
-    readonly dateOfBirth: Date;
+    readonly dateOfBirth: string;
     readonly gender: string;
     readonly homeDisrict: string;
     readonly traditionalAuthority: string;
