@@ -56,10 +56,10 @@ async create(@Body() createPatientDemoDto: CreatePatientDemoDto):Promise<Patient
  async remove (@Param('id') id: number):Promise<PatientDemoDocument>{
   const patient = await this.patientService.findById(id);
 
-  if(!patient){
-   throw new NotFoundException;
+  if(!!patient){
+   return this.patientService.remove(id);
   }else{
-    return this.patientService.remove(id);
+    throw new NotFoundException;
   }
   
  }
