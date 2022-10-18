@@ -22,6 +22,9 @@ export class UsersService {
       throw new BadRequestException()
     }
 
+
+  //console.log("==>",createUser.password)
+
     // Hash Password
     createUser.password = await this.hashService.hashPassword(createUser.password);
     return createUser.save();
