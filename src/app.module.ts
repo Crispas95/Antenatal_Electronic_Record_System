@@ -4,13 +4,15 @@ import { PatientDemoSchema } from './patient/dto/patientDemo.schema';
 import { PatientModule } from './patient/patient.module';
 import { SampleModule } from './sample/sample.module';
 import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/antenatalDB'),
     PatientModule,
-    UsersModule
+    UsersModule,
+    AuthModule
   ],
 })
 export class AppModule {}
